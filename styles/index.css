@@ -35,7 +35,6 @@ h1, h2, h3{ font-weight:700; }
 
 /* ---------- HERO ---------- */
 .hero{
-  background-image: url(./images/img_perfil_white.png);
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -76,8 +75,8 @@ h1, h2, h3{ font-weight:700; }
 
 .hero-photo{
   flex-shrink:0;
-  width:220px;
-  height:260px;
+  max-width: 380px;
+  max-height: 587px;
   border-radius:var(--radius);
   padding:3px;
   background:linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
@@ -132,7 +131,6 @@ h1, h2, h3{ font-weight:700; }
 }
 
 .project-card{
-  background-image: url(./images/screen_cafeteria.svg);
   width: 100%;
   max-width: 580px;
   display:flex;
@@ -289,15 +287,23 @@ h1, h2, h3{ font-weight:700; }
     justify-content:center;
     flex-wrap:wrap;
     gap:12px;
+    width: 100%;
   }
   .bio{
     margin-left:auto;
     margin-right:auto;
-    max-width: 100%;
+    max-width: 400px;
   }
-
+  .projects{
+    width: 100%;
+  }
   .projects-grid{
     grid-template-columns:1fr;
     gap: 20px;
+  }
+
+  .project-card-img{
+    width: 100%;
+    height: auto;
   }
 }
